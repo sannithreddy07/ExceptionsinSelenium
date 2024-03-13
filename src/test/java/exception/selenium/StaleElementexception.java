@@ -20,7 +20,7 @@ public class StaleElementexception {
 		Thread.sleep(1000);
 		driver.navigate().back(); // when we naviagte to back/refresh , the DOM structure changes as a fresh page appears  , new ajax call are made to server
 		Thread.sleep(1000);			//as result the element gets staled(old,decayed, or not fresh element to locate)
-									//use try catch to overcome this issue in catch block loctae the staled element and perform click
+									//use try catch to overcome this issue in catch block loctae the staled element and perform click again
 		try {
 		element.click();
 		}catch(StaleElementReferenceException e) {
